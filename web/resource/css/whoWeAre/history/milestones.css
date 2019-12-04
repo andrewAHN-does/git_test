@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: thin;
+  font-weight: 100;
+  src: url("../fonts/NotoSansKR-Thin.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: lighter;
+  font-weight: 300;
+  src: url("../fonts/NotoSansKR-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoSansKR-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bolder;
+  font-weight: 500;
+  src: url("../fonts/NotoSansKR-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/NotoSansKR-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 900;
+  src: url("../fonts/NotoSansKR-Black.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bolder;
+  font-weight: 600;
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 900;
+  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"); }
+
+.milestones .year, .milestones .col li em, .milestones .col li span {
+  float: left; }
+
+.scroll_bar .scroll i {
+  float: right; }
+
+.milestones .year {
+  text-align: center; }
+
+.milestones .col ul:after, .milestones .col li:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.milestones {
+  padding-top: 389px; }
+  .milestones .g_tit_h1 {
+    margin-bottom: 646px; }
+  .milestones .g_tit_h2 {
+    margin-bottom: 420px; }
+  .milestones .g_section {
+    margin-bottom: 309px; }
+  .milestones .year, .milestones .col {
+    width: 50%; }
+  .milestones .year {
+    font-size: 211px;
+    font-weight: bold;
+    line-height: 1;
+    color: #111; }
+  .milestones .col ul {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 112px 0; }
+  .milestones .col li {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+    color: #666; }
+    .milestones .col li.important {
+      font-weight: 400;
+      color: #333; }
+    .milestones .col li em {
+      display: inline-block;
+      margin: 0 69px 0 0; }
+
+.fix_area {
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 50%;
+  left: 81px; }
+
+.scroll_bar > div {
+  display: inline-block; }
+
+.scroll_bar .scroll {
+  height: 2px;
+  width: 360px;
+  background: #dcdcdc;
+  vertical-align: middle;
+  margin: 0 30px; }
+  .scroll_bar .scroll i {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #111; }
+
+.scroll_bar .comment p {
+  display: none; }
+  .scroll_bar .comment p:first-child {
+    display: block; }

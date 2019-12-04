@@ -1,0 +1,70 @@
+@import "../../sub.scss";
+
+/*media_notice*/
+.media_notice {
+
+  .row {
+    clear: both;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    transition: all .2s ease-in-out;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  .thum {
+    @extend %pull_left;
+    text-align: right;
+    width: 38%;
+    max-width: 728px;
+
+    img {
+      width: 320px;
+    }
+  }
+  .col {
+    position: $rel;
+    width: calc(62% - 120px);
+    max-width: 1072px;
+    margin-left: 120px;
+    padding: 25px 0;
+  }
+  em {
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .tit {
+    margin-bottom: 47px;
+  }
+  .date {
+    display: block;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.13;
+    color: #333;
+  }
+  .on {
+
+    em {
+      display: block;
+    }
+    .thum img {
+      width: $full;
+    }
+    .col {
+      height: 352px;
+    }
+    .hidden {
+      display: block;
+      position: $offset;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

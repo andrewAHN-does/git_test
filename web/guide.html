@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <style>
+        /* layout */
+        body * {
+            font-family: "Montserrat", "Noto Sans KR", sans-serif;
+        }
+        header {
+            height: 6em;
+            font-size: 1em;
+            color: #eee;
+            background: #333;
+            text-align: center;
+            padding: 1em 0;
+            margin-bottom: 1em;
+        }
+        h1 {
+            font-size: 1.8em;
+            font-weight: 600;
+            line-height: 1;
+            color: #fff;
+        }
+        .tabs {
+            display: flex;
+            width: 100%;
+            padding: 1em;
+        }
+        .tabs a {
+            display: block;
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+            padding: .5em 1em;
+            border: 1px solid #333;
+            border-left: 0;
+        }
+        .tabs a:first-child {
+            border-left: 1px solid #333;
+        }
+        .tabs .active {
+            background: #333;
+            color: #fff;
+        }
+        section {
+            padding: 1em;
+            font-size: 1em;
+            color: #333;
+            display: none;
+        }
+        section[data-name=folder] {
+            display: block;
+        }
+        section h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: .5em;
+        }
+        section pre {
+            border: 1px solid #eee;
+        }
+        section p,
+        section ul {
+            margin-bottom: 1em;
+            line-height: 1.5;
+        }
+
+        /*this page only*/
+        .header {
+            text-align: center;
+            padding: 20px 0 0;
+            margin-bottom: 50px;
+        }
+        .header:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .title {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1;
+            color: #fff;
+            background: #333;
+            padding: 5px;
+        }
+        .flexlayout {
+            width: 100%;
+            max-width: 1920px;
+            min-width: 1280px;
+            justify-content: center;
+            margin: auto;
+        }
+        .flexlayout .row {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .flexlayout .col {
+            padding: 10px;
+        }
+        .flexlayout  .col:first-child {
+            width: 360px;
+        }
+        .flexlayout p {
+            margin-bottom: 20px;
+        }
+        .flexlayout .eg {
+            margin-bottom: 30px;
+        }
+        .flexlayout ul.col {
+            display: flex;
+            width: 100%;
+        }
+        .flexlayout li {
+            width: 20%;
+            text-align: center;
+        }
+        .flexlayout .box {
+            display: block;
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+        }
+        .flexlayout .bg_111 {
+            background-color: #111;
+        }
+        .flexlayout .bg_333 {
+            background-color: #333;
+        }
+        .flexlayout .bg_666 {
+            background-color: #666;
+        }
+        .flexlayout .bg_87 {
+            background-color: #878787;
+        }
+        .flexlayout .bg_b4 {
+            background-color: #b4b4b4;
+        }
+        .flexlayout .bg_ccc {
+            background-color: #ccc;
+        }
+        .flexlayout .bg_e2 {
+            background-color: #e2e2e2;
+        }
+        .flexlayout .bg_eee {
+            background-color: #eee;
+        }
+        .flexlayout .bg_f9 {
+            background-color: #f9f9f9;
+        }
+        .flexlayout .bg_white {
+            background-color: #fff;
+            border: 1px solid #eee;
+        }
+        .flexlayout .bg_003569 {
+            background-color: #003569;
+        }
+        .flexlayout .bg_004c98 {
+            background-color: #004c98;
+        }
+        .flexlayout .bg_0965bc {
+            background-color: #0965bc;
+        }
+        .flexlayout .bg_1f3263 {
+            background-color: #1f3263;
+            opacity: .8;
+        }
+
+        .flexlayout .bold {
+            font-weight: 700;
+        }
+        .flexlayout .semiBold{
+            font-weight: 600;
+        }
+        .flexlayout .medium{
+            font-weight: 500;
+        }
+        .flexlayout .regular {
+            font-weight: 400;
+        }
+        .flexlayout .light {
+            font-weight: 300;
+        }
+        .color_111 {
+            color: #111;
+        }
+        .color_333 {
+            color: #333;
+        }
+        .color_666 {
+            color: #666;
+        }
+        .color_87 {
+            color: #878787;
+        }
+        .color_b4 {
+            color: #b4b4b4;
+        }
+        .color_ccc {
+            color: #ccc;
+        }
+        .color_e2 {
+            color: #e2e2e2;
+        }
+        .color_eee {
+            color: #eee;
+        }
+        .color_f9 {
+            color: #f9f9f9;
+        }
+        .color_white {
+            color: white;
+        }
+        .tit_h1 {
+            font-size: 104px;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #111;
+        }
+        .tit_h2 {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #111;
+        }
+        .tit_h3 {
+            font-size: 64px;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #111;
+        }
+        .cont_tit1 {
+            font-size: 32px;
+            line-height: 1.4;
+            letter-spacing: -4px;
+            color: #111;
+        }
+        .cont_tit2 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -1px;
+            color: #111;
+        }
+        .cont_tit3 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #111;
+        }
+        .cont_tit4 {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #111;
+        }
+        .text_date {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            color: #878787;
+        }
+        .cont_stit1 {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #111;
+        }
+        .cont_stit2 {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #111;
+        }
+        .paragraph_tit1 {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 2;
+            color: #333;
+        }
+        .paragraph_tit2 {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 2;
+            color: #666;
+        }
+        .text1 {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.75;
+            color: #333;
+        }
+        .text2 {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.86;
+            color: #666;
+        }
+        .text3 {
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.835;
+            color: #878787;
+        }
+        .text_small {
+            display: block;
+            color: #999;
+        }
+
+        .btn_area {
+            clear: both;
+            padding: 2em 0;
+            text-align: center;
+        }
+        .button {
+            margin: .4em;
+            padding: 1.5em 3em;
+            cursor: pointer;
+            background: #e1e1e1;
+            text-decoration: none;
+            color: #666;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hvr-curl-top-left {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+        }
+        .hvr-curl-top-left:before {
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            background: white;
+            /* IE9 */
+            background: linear-gradient(135deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#000');
+            /*For IE7-8-9*/
+            z-index: 1000;
+            box-shadow: 1px 1px 1px rgba(220, 220, 220, 0.4);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: width, height;
+            transition-property: width, height;
+        }
+        .hvr-curl-top-left:hover:before,
+        .hvr-curl-top-left:focus:before,
+        .hvr-curl-top-left:active:before {
+            height: 0;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<!--header-->
+<header>
+    <h1>NC Guide</h1>
+    last update : <span>2019-11-21</span>
+</header>
+<!--//header-->
+
+<!--tabs-->
+<nav class="tabs">
+    <a href="#" class="active">폴더구조</a>
+    <a href="#">공통 이슈 및 주의사항</a>
+    <a href="#">스타일 가이드</a>
+</nav>
+<!--//tabs-->
+
+<div class="content">
+    <!--folder-->
+    <section data-name="folder">
+        <h2>폴더구조</h2>
+        <pre>
+            <code>
+                │
+                └─ webapp
+                        │
+                        └─ src
+                            │
+                            └─ pc/mobile
+                                ├─ resource                        자원
+                                │  │
+                                │  ├─ css
+                                │  │   ├─ common                   공통 css (gnb, 간격, 레이아웃 등)
+                                │  │   ├─ font                     폰트 css
+                                │  │   ├─ main                     메인 css
+                                │  │   └─ sub                      서브 css
+                                │  │
+                                │  ├─ font                         폰트파일
+                                │  │
+                                │  ├─ img
+                                │  │   ├─ common                   공통이미지
+                                │  │   ├─ main                     메인이미지
+                                │  │   ├─ sub1                     서브페이지(폴더명은 페이지명 eg) intro)
+                                │  │   └─ ...
+                                │  │
+                                │  ├─ js
+                                │  │   ├─ vender                   외부 라이브러리, 플러그인
+                                │  │   │    ├─ jquery.js
+                                │  │   │    └─ ...
+                                │  │   ├─ common.js                공통 script(gnb 등)
+                                │  │   ├─ main.js                  메인 script
+                                │  │   └─ ...
+                                │  │
+                                │  ├─ scss                         scss 파일
+                                │  │    ├─ base                    reset, component
+                                │  │    ├─ helper
+                                │  │    │    ├─ variables.scss     변수
+                                │  │    │    ├─ mixin.scss         함수
+                                │  │    │    └─ helpers.scss       클래스&플레이스홀더
+                                │  │    ├─ vender                  외부 css framework(필요시)
+                                │  │    │    ├─ bootstrap.scss     부트스트랩
+                                │  │    │    └─ ...
+                                │  │    ├─ common.scss             공통(변수와 함수, 기본 레이아웃 등)
+                                │  │    ├─ main.scss               메인 scss
+                                │  │    └─ sub.scss                서브 scss
+                                │  │
+                                │  └─ download                     다운로드 파일
+                                │
+                                ├─ include                         헤더, 푸터 등
+                                │
+                                └─ jsp                             jsp 파일
+                                    ├─ main                        메인 jsp
+                                    ├─ sub1                        서브페이지(폴더명은 페이지명 eg) intro)
+                                    └─ ...
+            </code>
+        </pre>
+    </section>
+    <!--//folder-->
+
+    <section data-name="font">
+        <h2>폰트</h2>
+        <p>
+            기본 - noto sans kr<br>
+            영문 - Montserrat
+        </p>
+
+        <h2>HTML 가이드</h2>
+        <ul>
+            <li>공통 클래스에는 'g_' 추가 eg) g_common</li>
+            <li>공통 타이틀에는 'tit_' eg) tit_h2</li>
+            <li>공통적인 레이아웃에는 section 클래스 추가</li>
+            <li>일부 레이아웃이 달라져야 하는 페이지에는 section 클래스 뒤 해당 페이지명을 붙임. eg) class="section about1"</li>
+        </ul>
+
+        <h2>CSS 가이드</h2>
+        <ul>
+            <li>선택자는 최대 6개 이하</li>
+            <li>기본적으로 아이디나 클래스 단위로 선택, 특수한 경우가 아니면 태그와 선택자를 동시에 사용하지 말것. eg) .selector(O) / a.selector(X)</li>
+            <li>공통부분 등 상단에 주석을 필수로 기입</li>
+            <li>!important는 최대한 지양한다.</li>
+            <li>css 네이밍의 단어와 단어 사이에는 ‘_’를 사용한다.</li>
+            <li>활성화는 on 으로 통일한다.</li>
+        </ul>
+
+        <h2>JS 가이드</h2>
+        <ul>
+            <li>네이밍의 첫 자는 소문자 단어와 단어 사이는 대소문자로 구분한다</li>
+            <li>네이밍이 문자, 숫자 조합일 경우 문자를 앞에 사용한다 (문자+숫자)</li>
+            <li>!important는 최대한 지양한다.</li>
+            <li>UI 별로 주석을 필이 기입</li>
+            <li>
+                변수<br>
+                - 전역변수 : g_<br>
+                - 지역변수 : m_<br>
+                - jquery selecter : $<br>
+                - 배열 : arr<br>
+                - 버튼 : btn<br>
+                - boolean : is<br>
+                - for문 : i > j > k (다중 for문일 경우)<br>
+                - 인자값 : _
+            </li>
+        </ul>
+    </section>
+
+    <section data-name="style">
+        <div class="header">
+            <h1 class="title">TYPOGRAPHY</h1>
+        </div>
+        <div class="flexlayout">
+            <!--basic-->
+            <div class="row">
+                <div class="col">
+                    Surface, Background, Elements
+                </div>
+                <ul class="col">
+                    <li><span class="box bg_111"></span> #111111 <span class="text_small">어두운배경</span></li>
+                    <li><span class="box bg_333"></span> #cccccc <span class="text_small">버튼 라인</span></li>
+                    <li><span class="box bg_e2"></span> #e2e2e2 <span class="text_small">실선</span></li>
+                    <li><span class="box bg_eee"></span> #eeeeee <span class="text_small">연한 실선</span></li>
+                    <li><span class="box bg_f9"></span> #f9f9f9 <span class="text_small">연회색 배경</span></li>
+                    <li><span class="box bg_white"></span> #f9f9f9 <span class="text_small">연회색 배경</span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Typograghy
+                </div>
+                <ul class="col">
+                    <li class="color_111"><span class="box bg_111"></span> #111 <span class="text_small">메인 강조</span></li>
+                    <li class="color_333"><span class="box bg_333"></span> #333 <span class="text_small">주요 본문</span></li>
+                    <li class="color_666"><span class="box bg_666"></span> #666 <span class="text_small">서브 본문</span></li>
+                    <li class="color_87"><span class="box bg_87"></span> #878787 <span class="text_small">추가정보</span></li>
+                    <li class="color_b4"><span class="box bg_b4"></span> #b4b4b4 <span class="text_small">18px 이상 off컬러</span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Point
+                </div>
+                <ul class="col">
+                    <li><span class="box bg_003569"></span> #003569 <span class="text_small">버튼 컬러</span></li>
+                    <li><span class="box bg_004c98"></span> #004c98 <span class="text_small">화이트 배경 위<br>포인트 컬러</span></li>
+                    <li><span class="box bg_0965bc"></span> #0965bc <span class="text_small">블랙 배경 위<br>포인트 컬러</span></li>
+                    <li>&nbsp;</li>
+                    <li><span class="box bg_1f3263"></span> #1f3263 , opcity:80%<span class="text_small">이미지 오버 딤드 컬러</span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col">
+                    영문 폰트
+                </div>
+                <div class="col">
+                    <p>
+                        Montserrat
+                    </p>
+                    <p class="eg">
+                        font : <strong class="text_red">Montserrat</strong> / weight : <strong class="text_red"><span class="bold">Bold(700)</span>, <span class="semiBold">SemiBold(600)</span>, <span class="medium">Medium(500)</span>, <span class="regular">Regular(400)</span></strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    국문 폰트
+                </div>
+                <div class="col">
+                    <p>
+                        Noto Sans KR
+                    </p>
+                    <p class="eg">
+                        font : <strong class="text_red">Noto Sans KR</strong> / weight : <strong class="text_red"><span class="bold">Bold(700)</span>, <span class="medium">Medium(500)</span>, <span class="regular">Regular(400)</span>, <span class="light">Light(300)</span></strong>
+                    </p>
+                </div>
+            </div>
+
+            <!--메인타이틀-->
+            <div class="row">
+                <div class="col">
+                    메인상단 타이틀1<br>
+                    <span class="text_blue">WHO WE ARE - </span><br>
+                    <span class="text_blue">WHAT WE CREATE - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="tit_h1">NC 21 MOMENTS</span>
+                    </p>
+                    <p class="eg">
+                        영문 - font : <strong class="text_red">Montserrat</strong> / Size : <strong class="text_red">104</strong> / weight : <strong class="text_red">Bold</strong> / line height : <strong class="text_red">1</strong> / Spacing :  <strong class="text_red">-1px(-40)</strong> / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    메인상단 타이틀2<br>
+                    <span class="text_blue">MEDIA CENTER - </span><br>
+                    <span class="text_blue">INVESTORS - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="tit_h2">MULTIMEDIA</span>
+                    </p>
+                    <p class="eg">
+                        영문 - font : <strong class="text_red">Montserrat</strong> / Size : <strong class="text_red">80</strong> / weight : <strong class="text_red">Bold</strong> / line height : <strong class="text_red">1</strong> / Spacing :  <strong class="text_red">-2px(-40)</strong> / color : <strong class="text_red">#111</strong>
+                    </p>
+                    <p>
+                        <span class="tit_h3">IR 자료</span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">64</strong> / weight : <strong class="text_red">Bold</strong> / line height : <strong class="text_red">1</strong>  / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!--컨텐츠타이틀-->
+            <div class="row">
+                <div class="col">
+                    컨텐츠 대타이틀1<br>
+                    <span class="text_blue">ABOUT - </span><br>
+                    <span class="text_blue">WHAT WE CREATE Detail - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="cont_tit1">플레이어의 자유도 극대화</span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">32</strong> / weight : <strong class="text_red">Regular</strong> /line height : <strong class="text_red">1.4(78)</strong>  /  Spacing : <strong class="text_red">-4px(-50)</strong> / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    컨텐츠 대타이틀2<br>
+                    <span class="text_blue">MEDIA CENTER - </span><br>
+                    <span class="text_blue">INVESTORS - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="cont_tit2">CEO MESSAGE</span>
+                    </p>
+                    <p class="eg">
+                        영문 - font : <strong class="text_red">Montserrat</strong> / Size : <strong class="text_red">48</strong> / weight : <strong class="text_red">Bold</strong> / line height : <strong class="text_red">1.25(60)</strong>  /  Spacing : <strong class="text_red">-1px(-25)</strong> / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    컨텐츠 대타이틀3<br>
+                    <span class="text_blue">MEDIA CENTER - </span><br>
+                    <span class="text_blue">INVESTORS - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="cont_tit3">연결 재무상태표</span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">32</strong> / weight : <strong class="text_red">Bold</strong> / line height : <strong class="text_red">1</strong>  / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    컨텐츠 리스트 썸네일 하단 타이틀<br>
+                    <span class="text_blue">MEDIA CENTER - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="cont_tit4">엔씨(NC), 문화 축제 ‘FEVER FESTIVAL 2019’ 10월 개최</span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">22</strong> / weight : <strong class="text_red">Medium</strong> / line height : <strong class="text_red">1.5(33)</strong>  / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    컨텐츠 리스트 썸네일 하단 날짜표기<br>
+                    <span class="text_blue">MEDIA CENTER - </span>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="text_date">2019.11.06</span>
+                    </p>
+                    <p class="eg">
+                        font : <strong class="text_red">Montserrat</strong> / Size : <strong class="text_red">16</strong> / weight : <strong class="text_red">Medium</strong> / line height : <strong class="text_red">1</strong>  / color : <strong class="text_red">#878787</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    컨텐츠 소타이틀
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="cont_stit1">INTEGRITY</span>
+                    </p>
+                    <p class="eg">
+                        영문 - font : <strong class="text_red">Montserrat</strong> / Size : <strong class="text_red">26</strong> / weight : <strong class="text_red">SemiBold</strong> / line height : <strong class="text_red">1.4 (36)</strong>  / color : <strong class="text_red">#111</strong>
+                    </p>
+                    <p>
+                        <span class="cont_stit2">즐거움으로 연결된 새로운 세상</span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">24</strong> / weight : <strong class="text_red">Medium</strong> / line height : <strong class="text_red">1.5 (36)</strong>  / color : <strong class="text_red">#111</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!--본문-->
+            <div class="row">
+                <div class="col">
+                    대타이틀 하단 본문 텍스트
+                </div>
+                <div class="col">
+                    <p>
+                    <span class="paragraph_tit1">
+                    즐거움의 가치를 창출하는 곳,<br>
+                    엔씨가 만들어 나갈 새로운 세상으로 이르는 꿈의 관문입니다.
+                    </span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">18</strong> / weight : <strong class="text_red">Light</strong> / line height : <strong class="text_red">2 (36)</strong>  / color : <strong class="text_red">#333</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    소타이틀 하단 본문 텍스트
+                </div>
+                <div class="col">
+                    <p>
+                    <span class="paragraph_tit2">
+                    즐거움의 가치를 창출하는 곳,<br>
+                    엔씨가 만들어 나갈 새로운 세상으로 이르는 꿈의 관문입니다.
+                    </span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">16</strong> / weight : <strong class="text_red">Light</strong> / line height : <strong class="text_red">2 (32)</strong>  / color : <strong class="text_red">#333,666</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    본문 텍스트 2<br>
+                    <span class="text_blue">INVESTORS - </span><br>
+                    <span class="text_blue">FOOTER MENU - </span>
+                </div>
+                <div class="col">
+                    <p>
+                    <span class="text1">
+                    즐거움의 가치를 창출하는 곳,<br>
+                    엔씨가 만들어 나갈 새로운 세상으로 이르는 꿈의 관문입니다.
+                    </span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">16</strong> / weight : <strong class="text_red">Light</strong> / line height : <strong class="text_red">1.75 (28)</strong>  / color : <strong class="text_red">#333,666</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    본문 서브 텍스트
+                </div>
+                <div class="col">
+                    <p>
+                    <span class="text2">
+                    즐거움의 가치를 창출하는 곳,<br>
+                    엔씨가 만들어 나갈 새로운 세상으로 이르는 꿈의 관문입니다.
+                    </span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">14</strong> / weight : <strong class="text_red">Light</strong> / line height : <strong class="text_red">1.86 (26)</strong>  / color : <strong class="text_red">#666,878787</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    최소 사이즈
+                </div>
+                <div class="col">
+                    <p>
+                    <span class="text3">
+                    즐거움의 가치를 창출하는 곳,<br>
+                    엔씨가 만들어 나갈 새로운 세상으로 이르는 꿈의 관문입니다.
+                    </span>
+                    </p>
+                    <p class="eg">
+                        국문 - font : <strong class="text_red">Noto Sans KR</strong> / Size : <strong class="text_red">12</strong> / weight : <strong class="text_red">Light</strong> / line height : <strong class="text_red">1.835 (22)</strong>  / color : <strong class="text_red">#666,878787</strong>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn_area">
+            <!--출처: https://androphil.tistory.com/557-->
+            <a rel="curl-top-left" class="button hvr-curl-top-left">button</a>
+        </div>
+    </section>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var $tabs = $('.tabs'),
+                $tabItem = $tabs.find('a'),
+                $section = $('.content>section');
+
+        $tabItem.on('click', function(e){
+            e.preventDefault();
+            var $tIdx = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $section.eq($tIdx).show().siblings().hide();
+        });
+    });
+</script>
+
+</body>
+</html>

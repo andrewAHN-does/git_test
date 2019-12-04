@@ -1,0 +1,86 @@
+@import "../../base/font.scss";
+@import "../../helper/mixin.scss";
+@import "../../helper/helpers.scss";
+@import "../../animation.scss";
+
+.milestones {
+  padding-top: 389px;
+
+  .g_tit_h1 {
+    margin-bottom: 646px;
+  }
+  .g_tit_h2 {
+    margin-bottom: 420px;
+  }
+  .g_section {
+    margin-bottom: 309px;
+  }
+  .year,.col {
+    width: $full/2;
+  }
+  .year {
+    @extend %pull_left, %text_center;
+    font-size: 211px;
+    font-weight: bold;
+    line-height: 1;
+    color: #111;
+  }
+  .col ul {
+    @extend %after;
+    border-top: 1px solid rgba(0, 0, 0,.1);
+    padding: 112px 0;
+  }
+  .col li {
+    @extend %after;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+    color: #666;
+
+    &.important {
+      font-weight: 400;
+      color: #333;
+    }
+    em, span {
+      @extend %pull_left;
+    }
+    em {
+      display: $iblock;
+      margin: 0 69px 0 0;
+    }
+  }
+}
+.fix_area {
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 50%;
+  left: 81px;
+}
+.scroll_bar {
+
+  >div {
+    display: $iblock;
+  }
+  .scroll {
+    height: 2px;
+    width: 360px;
+    background: #dcdcdc;
+    vertical-align: middle;
+    margin: 0 30px;
+
+    i {
+      @extend %pull_right;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #111;
+    }
+  }
+  .comment p {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+  }
+}

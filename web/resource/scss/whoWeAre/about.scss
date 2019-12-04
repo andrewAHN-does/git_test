@@ -1,0 +1,13 @@
+@import "../base/font.scss";
+@import "../helper/mixin.scss";
+@import "../helper/helpers.scss";
+@import "../animation.scss";
+
+.about {
+  .g_tit_h4 {
+    & + .g_text_tit {margin-top:52px;}
+  }
+  .g_tit_h5 {
+    & + .g_text_tit {margin-top:64px;}
+  }
+}

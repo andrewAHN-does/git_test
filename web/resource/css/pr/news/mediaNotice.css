@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: thin;
+  font-weight: 100;
+  src: url("../fonts/NotoSansKR-Thin.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: lighter;
+  font-weight: 300;
+  src: url("../fonts/NotoSansKR-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoSansKR-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bolder;
+  font-weight: 500;
+  src: url("../fonts/NotoSansKR-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/NotoSansKR-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 900;
+  src: url("../fonts/NotoSansKR-Black.otf") format("opentype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bolder;
+  font-weight: 600;
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 900;
+  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"); }
+
+.media_notice .thum {
+  float: left; }
+
+.wrap:after, .g_section:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.brand .white {
+  display: none; }
+
+.wrap {
+  padding: 288px 10vw 0; }
+
+.g_tit_h1 {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 104px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #111; }
+
+.g_tit_h2 {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: #111; }
+  .g_tit_h2 em {
+    display: block;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 55px; }
+  .g_tit_h2 .date {
+    display: block;
+    font-size: 24px;
+    color: #666;
+    padding-top: 55px; }
+
+.g_tit_h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111; }
+
+.g_tit_h4 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #111;
+  letter-spacing: -4px; }
+
+.g_tit_h5 {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #111;
+  letter-spacing: -1px; }
+
+.g_text_tit {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2;
+  color: #333; }
+
+.g_section {
+  max-width: 1920px;
+  min-width: 1280px;
+  width: 100%;
+  margin: auto; }
+  .g_section .tit {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #111; }
+    .g_section .tit.ko {
+      font-size: 24px;
+      font-weight: 500; }
+  .g_section p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    color: #333; }
+  .g_section .date {
+    font-size: 16px;
+    font-weight: 4500;
+    line-height: 1.88;
+    color: #666; }
+
+/*media_notice*/
+.media_notice .row {
+  clear: both;
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+  transition: all .2s ease-in-out; }
+  .media_notice .row:first-child {
+    border-top: 0; }
+
+.media_notice .thum {
+  text-align: right;
+  width: 38%;
+  max-width: 728px; }
+  .media_notice .thum img {
+    width: 320px; }
+
+.media_notice .col {
+  position: relative;
+  width: calc(62% - 120px);
+  max-width: 1072px;
+  margin-left: 120px;
+  padding: 25px 0; }
+
+.media_notice em {
+  display: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 30px; }
+
+.media_notice .tit {
+  margin-bottom: 47px; }
+
+.media_notice .date {
+  display: block; }
+
+.media_notice p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2.13;
+  color: #333; }
+
+.media_notice .on em {
+  display: block; }
+
+.media_notice .on .thum img {
+  width: 100%; }
+
+.media_notice .on .col {
+  height: 352px; }
+
+.media_notice .on .hidden {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0; }

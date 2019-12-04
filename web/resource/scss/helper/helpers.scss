@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+%pull_left {float: left;}
+%pull_right {float: right;}
+%text_left {text-align: left;}
+%text_center {text-align: center;}
+%text_right {text-align: right;}
+
+%offsetL {position: $offset; top: 0; left: 0;}
+%offsetR {position: $offset; top: 0; right: 0;}
+%offsetBL {position: $offset; bottom: 0; left: 0;}
+%offsetBR {position: $offset; bottom: 0; right: 0;}
+%textHidden {overflow: $hidden; text-indent: -999px; font-size: 0;}
+%after {
+  &:after {content:""; clear: both; display: block;}
+}

@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+@mixin ellipsis {
+  overflow: $hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin ellipsisP {
+  overflow: $hidden;
+  word-wrap:break-word;
+  text-overflow: ellipsis;
+}
+@mixin offsetC($width,$height) {
+  position: $offset;
+  top: 50%; left: 50%;
+  margin-top: -$height/2;
+  margin-left: -$width/2;
+}
+

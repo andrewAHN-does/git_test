@@ -1,0 +1,95 @@
+@import "base/font.scss";
+@import "helper/mixin.scss";
+@import "helper/helpers.scss";
+
+.brand .black {
+    display: none;
+}
+
+#header {
+  background: black;
+
+  a {
+    color: #fff !important;
+  }
+  .sub {
+    background: black;
+  }
+  .sub,
+  .submenu>ul {
+   border-color: rgba(238,238,238,.5);
+  }
+
+  .sub .submenu>ul:hover:hover {
+    background-color: rgba(237, 237, 237, .25%);
+  }
+}
+
+body {
+  background: black;
+}
+/*animation keyframe*/
+@keyframes rotate-loading {
+  0%  {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading-text-opacity {
+  0%  {
+    opacity: 0
+  }
+  20% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100%{
+    opacity: 0
+  }
+}
+.loading-container,
+.loading {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100%;
+}
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+
+.loading {
+  border: 2px solid transparent;
+  border-color: transparent #eee transparent #eee;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+  transform-origin: 50% 50%;
+}
+
+.loading-container:hover .loading {
+  border-color: transparent #E45635 transparent #E45635;
+}
+.loading-container:hover .loading,
+.loading-container .loading {
+  transition: all 0.5s ease-in-out;
+}
+
+#loading-text {
+  animation: loading-text-opacity 2s linear 0s infinite normal;
+  color: #eee;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 45px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100px;
+}
