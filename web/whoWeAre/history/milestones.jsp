@@ -123,7 +123,7 @@
 
 				$(window).on("scroll", function () {
 					var $winT = $(window).scrollTop();
-					
+					console.log('init');
 				});
 			});
 		</script>

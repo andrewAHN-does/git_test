@@ -44,67 +44,67 @@ table {
   font-family: "Noto Sans KR";
   font-style: thin;
   font-weight: 100;
-  src: url("../fonts/NotoSansKR-Thin.otf") format("opentype"); }
+  src: url("../../fonts/NotoSansKR-Thin.otf") format("opentype"); }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-style: lighter;
   font-weight: 300;
-  src: url("../fonts/NotoSansKR-Light.otf") format("opentype"); }
+  src: url("../../fonts/NotoSansKR-Light.otf") format("opentype"); }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/NotoSansKR-Regular.otf") format("opentype"); }
+  src: url("../../fonts/NotoSansKR-Regular.otf") format("opentype"); }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-style: bolder;
   font-weight: 500;
-  src: url("../fonts/NotoSansKR-Medium.otf") format("opentype"); }
+  src: url("../../fonts/NotoSansKR-Medium.otf") format("opentype"); }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-style: bold;
   font-weight: 700;
-  src: url("../fonts/NotoSansKR-Bold.otf") format("opentype"); }
+  src: url("../../fonts/NotoSansKR-Bold.otf") format("opentype"); }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-style: bold;
   font-weight: 900;
-  src: url("../fonts/NotoSansKR-Black.otf") format("opentype"); }
+  src: url("../../fonts/NotoSansKR-Black.otf") format("opentype"); }
 
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+  src: url("../../fonts/Montserrat-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Montserrat-Medium.ttf") format("truetype"); }
+  src: url("../../fonts/Montserrat-Medium.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Montserrat";
   font-style: bolder;
   font-weight: 600;
-  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype"); }
+  src: url("../../fonts/Montserrat-SemiBold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Montserrat";
   font-style: bold;
   font-weight: 700;
-  src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); }
+  src: url("../../fonts/Montserrat-Bold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Montserrat";
   font-style: bold;
   font-weight: 900;
-  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"); }
+  src: url("../../fonts/Montserrat-ExtraBold.ttf") format("truetype"); }
 
 .col, #header .sub .submenu > ul {
   float: left; }
@@ -267,18 +267,6 @@ body {
           #header .sub .submenu > ul:hover:before {
             display: block;
             border-top: 2px solid #004c98; }
-    #header .sub .sub1 {
-      width: 174px; }
-    #header .sub .sub2 {
-      width: 208px; }
-    #header .sub .sub3 {
-      width: 183px; }
-    #header .sub .sub4 {
-      width: 154px; }
-    #header .sub .sub5 {
-      width: 140px; }
-    #header .sub .sub6 {
-      width: 148px; }
     #header .sub a {
       display: block;
       font-size: 14px;
